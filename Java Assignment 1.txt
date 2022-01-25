@@ -1,0 +1,351 @@
+WAP--> Write a program
+
+Q.WAP to find weather the no entered by user is even or odd.
+
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      
+      int n = sc.nextInt();
+      
+      if(n%2==0){
+          System.out.println("It's a Even Number");
+      }
+      else{
+          System.out.println("It's a Odd Number");
+      }
+      
+   }   
+}
+
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to swap the values of 2 nos.(Take input from user)
+eg a=10 b=20
+after swapping
+a=20 b=10
+
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      
+      int a = sc.nextInt();
+      int b = sc.nextInt();
+      
+      System.out.println("Original Values of a & b are "+a+" "+b);
+      
+      int tmp = b;
+      b = a;
+      a = tmp;
+      
+      System.out.println("After Swapping a & b are "+a+" "+b);      
+      
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to find the greatest between the 3 nos and display the output. (Take input from user)
+
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      
+      int a = sc.nextInt();
+      int b = sc.nextInt();
+      int c = sc.nextInt();
+      
+      int res = 0;
+      
+      if(a>b){
+          if(a>c)
+            res = a;
+          else
+            res = c;
+      }
+      else{
+          if(b>c)
+            res = b;
+          else
+            res = c;
+      }     
+      System.out.println(res+" is the Largest Number. ");
+      
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to find weather the character entered by user is a vowel or not.(solve by using if..else and switch case)
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      
+      char ch = sc.next().charAt(0);
+      if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+        System.out.println(ch + " is vowel");
+      else
+        System.out.println(ch + " is consonant");
+      
+      switch (ch) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                System.out.println(ch + " is vowel");
+                break;
+            default:
+                System.out.println(ch + " is consonant");
+        }
+   }   
+
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to print even nos from 1-50 using while loop.
+public class Main {
+   public static void main(String args[]) {
+      
+      int n = 50;
+      int i = 1;
+      while(i!=n){
+          if(i%2==0){
+            System.out.println(i);
+          }
+          i+=1;
+        }
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to print odd nos from 50-100 using do while loop.
+public class Main {
+   public static void main(String args[]) {
+      
+      int n = 100;
+      int i = 1;
+      do{
+          if(i%2!=0){
+            System.out.println(i);
+          }
+          i+=1;
+        }while(i!=n);
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.Given a number N, print sum of all even numbers from 1 to N.
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      
+      int n = sc.nextInt();
+      int res = 0;
+      for(int i=0;i<=n;i++){
+          if(i%2==0){
+              res += i;
+          }
+      }  
+      System.out.println(res);
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q. WAP to print the following patterns  
+a.for n=4
+1
+22
+333
+4444
+
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      
+      for(int i=1;i<=n;i++){
+          for(int j=1;j<=i;j++){
+              System.out.print(i);
+          }
+          System.out.println();
+      }
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+b.for n=4
+4444
+4444
+4444
+4444
+
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      
+      for(int i=1;i<=n;i++){
+          for(int j=1;j<=n;j++){
+              System.out.print(n);
+          }
+          System.out.println();
+      }
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+c.for n=5
+    *
+   **
+  ***
+ ****
+*****
+
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      
+      for(int i=1;i<=n;i++){
+          for(int j=0;j<n-i;j++){
+              System.out.print(" ");
+          }
+          for(int j=1;j<=i;j++){
+              System.out.print("*");
+          }
+          System.out.println();
+      }
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.import java.util.*;
+public class Main {
+    public static void main(String[] args)
+    {
+        int[] a = {10, 20, 30, 40, 50};
+        int[] b = new int[5];
+        int j = 5;
+        for (int i = 0; i < 5; i++) {
+            b[j - 1] = a[i];
+            j = j - 1;
+        }
+        System.out.println("Reversed array");
+        for (int k = 0; k < 5; k++) {
+            System.out.println(b[k]);
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.Swap the nos in Array.
+import java.util.*;
+public class Main {
+    public static void main(String[] args)
+    {
+        int[] a = {10, 20, 30, 40, 50};
+        int j = 5;
+        for (int i = 0; i <= 5/2; i++) {
+            int tmp = a[i];
+            a[i] = a[j-i-1];
+            a[j-i-1] = tmp;
+        }
+        System.out.println("array after swaping");
+        for (int k = 0; k < 5; k++) {
+            System.out.println(a[k]);
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to calculate and display the factorial of a no entered by user.
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int res = 1;
+      for(int i=1;i<=n;i++){
+          res*=i;
+      }
+      System.out.println(res+" is a Factorial of "+n);
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to check weather the no entered by user is prime or not.
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      boolean res = true;
+      for(int i=2;i<n;i++){
+          if(n%i==0)
+            res = false;
+      }
+      if(res)
+        System.out.println("It is a Prime Number. ");
+      else
+        System.out.println("It is Not a Prime Number. ");
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.Given an integer N, print all the prime numbers that lie in the range 2 to N (both inclusive).
+
+import java.util.*;
+public class Main {
+   public static boolean isPrime(int n){
+      boolean res = true;
+      for(int i=2;i<n;i++){
+          if(n%i==0)
+            res = false;
+      }
+      return res;
+   }
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      for(int i=2;i<=n;i++){
+          if(isPrime(i))
+            System.out.println(i);
+      }
+   }   
+}
+-----------------------------------------------------------------------------------------------------
+
+Q.WAP to generate the reverse of a given number N. Print the corresponding reverse number.
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int reverse = 0;
+      while(n!=0){
+          reverse = reverse*10 + n%10;
+          n = n/10;
+      }
+      System.out.println(reverse);
+   }   
+}
+-----------------------------------------------------------------------------------------------------
